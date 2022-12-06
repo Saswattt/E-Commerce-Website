@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign up</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstarp.min.css">
+    <script src="jQuery.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.signup').click(function(){
+                alert("You're Signed Up Successfully !!");
+            });
+        });
+    </script>
+           
+  
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            padding: 16px;
+        }
+        img{
+            background-color: #ff0000;
+            padding: auto;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="tel"],
+        #city {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: 2px solid black;
+            border-radius: 3px;
+            background: #f1f1f1;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus,
+        input[type="tel"]:focus {
+            background-color: #ddd;
+            outline: none;
+            border: 2px solid black;
+            border-radius: 3px;
+        }
+
+        hr {
+            border: 1px solid #f1f1f1;
+            margin-bottom: 25px;
+        }
+
+        .signup {
+            background-color: #ff0000;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .signup:hover {
+            background-color: #24fd07;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(85, 85, 85);">
+    <form name="myForm" onsubmit="return validateForm()">
+        <div class="container">
+            <p align="center">
+                <img src="/Images/Logos/redwolf.webp"
+                    alt="SOA Logo" width="100px">
+            <h1 align="center">Register</h1>
+            </p>
+            <hr />
+            <label for="name"><b><big>Username:</big></b></label>
+            <input type="text" name="name" id="name" placeholder="Enter your Name">
+            <label for="email"><b><big>Email</big></b></label>
+            <input type="text" name="email" id="email" placeholder="Enter Email">
+            <label for="phone"><b><big>Mobile:</big></b></label>
+            <input type="tel" name="phone" id="phone" placeholder="Enter Mobile No.">
+            <div>
+                <label for="gender"><b><big>Gender:</big></b></label>
+                <br>
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female
+                <input type="radio" name="gender" value="other"> Other
+            </div>
+            <br>
+            <label for="city"><b><big>City:</big></b></label>
+            <select id="city" name="city">
+                <option value="bhubaneswar">Bhubaneswar</option>
+                <option value="newdelhi">Goa</option>
+                <option value="kolkata">Kerala</option>
+                <option value="mumbai">Rourkela</option>
+            </select>
+            <label for="psw"><b><big>Password:</big></b></label>
+            <input type="password" placeholder="Enter Password" name="psw" id="psw">
+            <button type="submit" class="signup">submit</button>
+        </div>
+    </form>
+</body>
+</html>
